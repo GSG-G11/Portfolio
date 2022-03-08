@@ -1,6 +1,12 @@
 const router = require('express').Router();
-const { addProject, updateProject, deletePoject } = require('../controllers/project.controller');
+const {
+  getProjects,
+  addProject,
+  updateProject,
+  deletePoject,
+} = require('../controllers/project.controller');
 
+router.get('/getProjects', getProjects);
 router.post('/addProject', addProject);
 router.patch('/updateProject', updateProject);
 router.delete('/deletePoject', deletePoject);
