@@ -1,7 +1,8 @@
-const express = require('express');
 const { join } = require('path');
+const express = require('express');
 const homeRouter = require('./routes/home.router');
 const projectRouter = require('./routes/project.router');
+const { clientError, serverError } = require('./controllers/error.controller');
 
 const app = express();
 
@@ -13,5 +14,8 @@ app.set('port', process.env.PORT || 3000);
 
 app.use('/', homeRouter);
 app.use('/project', projectRouter);
+
+app.use(clientError);
+app.use(serverError);
 
 module.exports = app;
