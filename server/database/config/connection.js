@@ -5,7 +5,7 @@ const {
 
 const {
   NODE_ENV,
-  DB_URL,
+  DATABASE_URL,
   TEST_DB_URL,
   DEV_DB_URL,
 } = process.env;
@@ -14,7 +14,7 @@ let dbUrl = '';
 
 switch (NODE_ENV) {
   case 'production':
-    dbUrl = DB_URL;
+    dbUrl = DATABASE_URL;
     break;
   case 'test':
     dbUrl = TEST_DB_URL;
