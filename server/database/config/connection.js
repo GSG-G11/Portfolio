@@ -29,7 +29,7 @@ switch (NODE_ENV) {
 
 const connection = new Pool({
   connectionString: dbUrl,
-  ssl: false,
+  ssl: { rejectUnauthorized: false },
 });
 
 module.exports = connection;
