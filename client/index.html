@@ -1,1 +1,109 @@
-hsdlflk
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/iconTab.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Readex+Pro:wght@200;300;400;500;600;700&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/home"
+          ><img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Portfolio.hu_full_logo.png?20200513123442"
+            alt=""
+        /></a>
+        <ul>
+          <li>Projects</li>
+          <li>Service</li>
+          <li>Testimonial</li>
+          <li>About</li>
+          <li>Contact Me</li>
+        </ul>
+        <div class="search">
+          <input type="search" name="search" placeholder="search..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </header>
+      <main>
+        <div class="content">
+          <section class="left">
+            <h2>We have Coding Experience</h2>
+            <p class="info">
+              Hi! I’m FullStack Developer-creating bold & brave applications for
+              companies all across the world.
+            </p>
+            <div class="buttons">
+              <button class="hire">Hire Me</button>
+              <button class="projects btn-add-project">Explore Projects</button>
+            </div>
+            <div class="links">
+              <p>Check Out My</p>
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-codepen"></i>
+              <i class="fa-brands fa-free-code-camp"></i>
+            </div>
+          </section>
+          <section class="right">
+            <img class="img-right" src="img/img left side.png" alt="" />
+            <img src="img/border left side.png" alt="" />
+          </section>
+        </div>
+
+        <div class="wrap-project-list">
+          <section class="project-list">
+            <div class="custom-method">
+              <ul class="categories-list">
+                <li>All</li>
+                <li>FrontEnd</li>
+                <li>BackEnd</li>
+                <li>FullStack</li>
+              </ul>
+              <button class="add-project btn-add-project">Add Project</button>
+            </div>
+            <div class="wrap-cards">
+              <ul class="cards">
+                <li class="card">
+                  <h4 class="name-card">ToDo App</h4>
+                  <p class="desc-card">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    minus dignissimos recusandae, ad accusantium esse quibusdam
+                    mollitia nesciunt ipsum! Placeat praesentium explicabo
+                    laboriosam ratione quas sequi consequuntur nemo enim
+                    aperiam.
+                  </p>
+                  <p class="category-card">FrontEnd</p>
+                  <div class="icons-card">
+                    <a href=""><i class="fa-solid fa-link link-icon"></i></a>
+                    <i class="fa-regular fa-pen-to-square edit-icon"></i>
+                    <i class="fa-regular fa-trash-can delete-icon"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="JS/dom.js"></script>
+    <script src="JS/getData.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
