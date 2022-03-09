@@ -15,7 +15,7 @@ CREATE TABLE projects(
   categoryId INT,
   FOREIGN KEY(categoryId) REFERENCES categories(categoryId)
 );
-INSERT INTO categories (name) VALUES('front end'),('back end'),('fullstack');
-INSERT INTO projects (name, description, link, categoryId) VALUES('alhabil project', 'todo app', 'link project' ,1),('helles project', 'portfolio app', 'link project' ,2), ('mostafa project', 'calculator app', 'link project' ,3);
+INSERT INTO categories (name) VALUES('Front end'),('Back end'),('FullStack');
+INSERT INTO projects (name, description, link, categoryId) VALUES('TODO EXPRESS', 'simple todo app using node js express', 'https://taskat.herokuapp.com/' ,1),('STARBUCKS CLONE', 'Starbucks home page from scratch nice and beuatifull styls', 'https://mo7amedehab97.github.io/starbucks-clone/' ,2), ('MY PORTFOLIO', 'Landing page contains my profile', 'https://mohammadalhabil.github.io/MyPortfolio/' ,3),('ToDoApp-MohammadAlHabil', ' ToDo list is a simple website to save Your daily tasks in order not to miss anything ', 'https://gsg-g11.github.io/ToDoApp-MohammadAlHabil/' ,3);
 
 COMMIT;

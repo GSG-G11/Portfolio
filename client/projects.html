@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/iconTab.png" />
+    <link rel="icon" href="/img/iconTab.png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,7 +18,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -43,27 +43,20 @@
         </div>
       </header>
       <main>
-        <div class="content">
-          <section class="left">
-            <h2>We have Coding Experience</h2>
-            <p class="info">
-              Hi! I’m FullStack Developer-creating bold & brave applications for
-              companies all across the world.
-            </p>
-            <div class="buttons">
-              <button class="hire">Hire Me</button>
-              <button class="projects"><a href="/project/getHomeProjects">Explore Projects</a></button>
+        <div class="wrap-project-list">
+          <section class="project-list">
+            <div class="custom-method">
+              <ul class="categories-list">
+                <li>All</li>
+                <li>FrontEnd</li>
+                <li>BackEnd</li>
+                <li>FullStack</li>
+              </ul>
+              <button class="add-project btn-add-project">Add Project</button>
             </div>
-            <div class="links">
-              <p>Check Out My</p>
-              <i class="fa-brands fa-github"></i>
-              <i class="fa-brands fa-codepen"></i>
-              <i class="fa-brands fa-free-code-camp"></i>
+            <div class="wrap-cards">
+              <ul class="cards"></ul>
             </div>
-          </section>
-          <section class="right">
-            <img class="img-right" src="img/img left side.png" alt="" />
-            <img src="img/border left side.png" alt="" />
           </section>
         </div>
       </main>
@@ -113,8 +106,8 @@
       </div>
     </div>
     <div class="loading">Loading...</div>
-    <script src="JS/dom.js"></script>
-    <script src="JS/getData.js"></script>
-    <script src="JS/index.js"></script>
+    <script src="/JS/dom.js"></script>
+    <script src="/JS/getData.js"></script>
+    <script src="/JS/index.js"></script>
   </body>
 </html>

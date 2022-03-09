@@ -7,7 +7,7 @@ const addProject = (req, res) => {
     link,
     categoryId,
   } = req.body;
-  addProjectQuery(name, description, link, categoryId).then(() => res.redirect('/'));
+  addProjectQuery(name, description, link, categoryId).then(() => res.redirect('/project/getHomeProjects'));
 };
 
 module.exports = addProject;
