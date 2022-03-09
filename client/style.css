@@ -226,7 +226,6 @@ main {
 }
 
 .wrap-project-list {
-  display: none;
   padding-top: 15px;
   position: relative;
 }
@@ -532,4 +531,8 @@ textarea {
   padding: 15px;
   border-radius: 8px;
   z-index: 20;
+}
+
+a {
+  color: var(--font);
 }

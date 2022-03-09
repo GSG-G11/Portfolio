@@ -2,6 +2,7 @@
 /* eslint-disable no-tabs */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+window.addEventListener('load', () => getDataApi('/project/getProjects', 'GET', handleProjects));
 const form = document.getElementById('form');
 const formContainer = document.getElementsByClassName('wrap-form-container')[0];
 
@@ -30,7 +31,6 @@ const setSuccessFor = (input) => {
 };
 
 const checkInputs = () => {
-	// trim to remove the whitespaces
   let stauts = false;
 	const usernameValue = username.value.trim();
 	const linkValue = link.value.trim();
@@ -64,8 +64,6 @@ const showLoading = () => { loading.style.display = 'block'; };
 const hideLoading = () => { loading.style.display = 'none'; };
 
 const getProject = () => {
-  content.style.display = 'none';
-  wrapProjectList.style.display = 'block';
   getDataApi('/project/getProjects', 'GET', handleProjects);
 };
 showProject.forEach((item) => {

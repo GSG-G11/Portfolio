@@ -4,8 +4,10 @@ const {
   addProject,
   updateProject,
   deletePoject,
+  getHomeProjects,
 } = require('../controllers/project.controller');
 
+router.get('/getHomeProjects', getHomeProjects);
 router.get('/getProjects', getProjects);
 router.post('/addProject', addProject);
 router.patch('/updateProject', updateProject);
