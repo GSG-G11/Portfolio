@@ -33,11 +33,11 @@ const handleProjects = (data) => {
 
     const editIcon = document.createElement('i');
     editIcon.classList.add('fa-regular', 'fa-pen-to-square', 'edit-icon');
-    editIcon.setAttribute('data-index', projectObj.id);
+    editIcon.addEventListener('click', () => editProject(projectObj.id));
 
     const deleteIcon = document.createElement('i');
     deleteIcon.classList.add('fa-regular', 'fa-trash-can', 'delete-icon');
-    deleteIcon.setAttribute('data-index', projectObj.id);
+    deleteIcon.addEventListener('click', () => deleteProject(projectObj.id));
 
     linkGithub.appendChild(linkIcon);
     linksIcon.appendChild(linkGithub);
@@ -60,4 +60,8 @@ const handleCategories = (data) => {
     option.value = category.categoryid;
     categoryList.appendChild(option);
   });
+};
+
+const handleDelete = (data) => {
+  window.location = '/project/getHomeProjects';
 };

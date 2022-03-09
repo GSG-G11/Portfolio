@@ -3,6 +3,7 @@ const addProject = require('./addProject.controller');
 const updateProject = require('./updateProject.controller');
 const deletePoject = require('./deletePoject.controller');
 const getHomeProjects = require('./getHomeProjects.controller');
+const getProjectDetails = require('./getProjectDetails.controller');
 
 module.exports = {
   getProjects,
@@ -10,4 +11,5 @@ module.exports = {
   updateProject,
   deletePoject,
   getHomeProjects,
+  getProjectDetails,
 };

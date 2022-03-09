@@ -59,6 +59,7 @@ const showProject = document.querySelectorAll('.show-project');
 const content = document.querySelector('.content');
 const wrapProjectList = document.querySelector('.wrap-project-list');
 const btnAddProject = document.querySelector('.btn-add-project');
+const addProjectSubmit = document.querySelector('#addProjectSubmit');
 
 const showLoading = () => { loading.style.display = 'block'; };
 const hideLoading = () => { loading.style.display = 'none'; };
@@ -75,3 +76,40 @@ const showAddProject = () => {
   getDataApi('/getCategories', 'GET', handleCategories);
 };
 btnAddProject.addEventListener('click', showAddProject);
+
+const deleteProject = (id) => getDataApi(`/project/deletePoject/${id}`, 'DELETE', handleDelete);
+
+const updateData = (id) => {
+  const name = username.value.trim();
+	const linkObj = link.value.trim();
+	const descriptionObj = description.value.trim();
+	const categoryId = category.value.trim();
+  const postDataApi = (url, methodType, dataBody) => {
+    showLoading();
+    fetch(url, { method: methodType, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(dataBody) }).then(() => {
+      hideLoading();
+      window.location = '/project/getHomeProjects';
+    }).catch();
+  };
+  const dataBodyObj = {
+    projectId: id, name, description: descriptionObj, link: linkObj, categoryId,
+  };
+  postDataApi('/project/updateProject', 'PATCH', dataBodyObj);
+};
+
+const handleProjectDetails = (data) => {
+  const project = data[0];
+  username.value = project.name;
+	link.value = project.link;
+	description.value = project.description;
+};
+
+const editProject = (id) => {
+  getDataApi('/getCategories', 'GET', handleCategories);
+  getDataApi(`/project/getProjectDetails/${id}`, 'GET', handleProjectDetails);
+  formContainer.style.display = 'flex';
+  addProjectSubmit.addEventListener('click', (e) => {
+    e.preventDefault();
+    updateData(id);
+  });
+};
