@@ -99,8 +99,57 @@
               </ul>
             </div>
           </section>
+          <!-- form -->
         </div>
       </main>
+    </div>
+    <div class="wrap-form-container">
+      <div class="form-container">
+        <div class="header">
+          <h2>Add New Project</h2>
+          <i class="fa-solid fa-xmark" id="cancel-icon"></i>
+        </div>
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="username">Name</label>
+            <input type="text" placeholder="Name" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="link">Link</label>
+            <input type="text" placeholder="Link" id="link" />
+
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="description">Description</label>
+            <textarea
+              name="Description"
+              id="description"
+              cols="28"
+              rows="5"
+            ></textarea>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option value="FullStack" selected>FullStack</option>
+              <option value="Back end">Back End</option>
+              <option value="Front End">Front End</option>
+            </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
     <script src="JS/dom.js"></script>
     <script src="JS/getData.js"></script>
