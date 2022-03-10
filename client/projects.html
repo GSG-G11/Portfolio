@@ -67,42 +67,44 @@
           <h2>Add New Project</h2>
           <i class="fa-solid fa-xmark" id="cancel-icon"></i>
         </div>
-        <form action="/project/addProject" method="POST" id="form" class="form">
-          <div class="form-control">
-            <label for="username">Name</label>
-            <input type="text" placeholder="Name" id="username" name="name" />
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="link">Link</label>
-            <input type="text" placeholder="Link" id="link" name="link" />
-
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="description">Description</label>
-            <textarea
-              name="description"
-              id="description"
-              cols="28"
-              rows="5"
-            ></textarea>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-          <div class="form-control">
-            <label for="category">Category</label>
-            <select name="categoryId" id="category"></select>
-            <i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-          </div>
-
-          <button type="submit" id="addProjectSubmit">Submit</button>
-        </form>
+        <div class="wrap-form">
+          <form action="/project/addProject" method="POST" id="form" class="form">
+            <div class="form-control">
+              <label for="username">Name</label>
+              <input type="text" placeholder="Name" id="username" name="name" />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="link">Link</label>
+              <input type="text" placeholder="Link" id="link" name="link" />
+  
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="description">Description</label>
+              <textarea
+                name="description"
+                id="description"
+                cols="28"
+                rows="5"
+              ></textarea>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+            <div class="form-control">
+              <label for="category">Category</label>
+              <select name="categoryId" id="category"></select>
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
+            </div>
+  
+            <button type="submit" id="addProjectSubmit">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
     <div class="loading">Loading...</div>

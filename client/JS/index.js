@@ -2,7 +2,11 @@
 /* eslint-disable no-tabs */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-window.addEventListener('load', () => getDataApi('/project/getProjects', 'GET', handleProjects));
+window.addEventListener('load', () => {
+  getDataApi('/getCategories', 'GET', handleCategories);
+  getDataApi('/project/getProjects', 'GET', handleProjects);
+});
+
 const form = document.getElementById('form');
 const formContainer = document.getElementsByClassName('wrap-form-container')[0];
 
@@ -45,13 +49,16 @@ const checkInputs = () => {
 	if (descriptionValue === '') stauts = setErrorFor(description, 'description cannot be blank');
 	else stauts = setSuccessFor(description);
 
-	if (categoryValue === '') stauts = setErrorFor(category, 'category cannot be blank');
-	else stauts = setSuccessFor(category);
   return stauts;
 };
 
-form.addEventListener('submit', (e) => {
-  if (checkInputs()) formContainer.style.display = 'none';
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const state = await checkInputs();
+  if (state) {
+    formContainer.style.display = 'none';
+    form.submit();
+  } else return false;
 });
 
 const loading = document.querySelector('.loading');
@@ -105,7 +112,6 @@ const handleProjectDetails = (data) => {
 };
 
 const editProject = (id) => {
-  getDataApi('/getCategories', 'GET', handleCategories);
   getDataApi(`/project/getProjectDetails/${id}`, 'GET', handleProjectDetails);
   formContainer.style.display = 'flex';
   addProjectSubmit.addEventListener('click', (e) => {

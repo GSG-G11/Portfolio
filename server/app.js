@@ -3,7 +3,7 @@ const express = require('express');
 const homeRouter = require('./routes/home.router');
 const projectRouter = require('./routes/project.router');
 const categoryRouter = require('./routes/category.router');
-const { clientError, serverError } = require('./controllers/error.controller');
+const { clientError, serverError } = require('./controllers/errors/handlingErrors');
 
 const app = express();
 
