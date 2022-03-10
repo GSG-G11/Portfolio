@@ -1,9 +1,10 @@
 const { join } = require('path');
 const express = require('express');
 const homeRouter = require('./routes/home.router');
+const errorRouter = require('./routes/error.router');
+
 const projectRouter = require('./routes/project.router');
 const categoryRouter = require('./routes/category.router');
-const { clientError, serverError } = require('./controllers/error.controller');
 
 const app = express();
 
@@ -17,7 +18,6 @@ app.use('/', homeRouter);
 app.use('/project', projectRouter);
 app.use('/getCategories', categoryRouter);
 
-app.use(clientError);
-app.use(serverError);
+app.use(errorRouter);
 
 module.exports = app;
