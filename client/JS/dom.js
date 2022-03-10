@@ -25,6 +25,7 @@ const handleProjects = (data) => {
     linksIcon.className = 'icons-card';
 
     const linkGithub = document.createElement('a');
+    linkGithub.setAttribute('target', '_blank');
     linkGithub.classList.add('user-name');
     linkGithub.setAttribute('href', projectObj.link);
 

@@ -13,7 +13,10 @@ const category = document.getElementById('category');
 const cancel = document.getElementById('cancel-icon');
 
 cancel.addEventListener('click', () => {
-	formContainer.style.display = 'none';
+  formContainer.style.display = 'none';
+  username.textContent = '';
+  link.textContent = '';
+  description.textContent = '';
 });
 
 const setErrorFor = (input, message) => {
@@ -52,6 +55,9 @@ const checkInputs = () => {
 
 form.addEventListener('submit', (e) => {
   if (checkInputs()) formContainer.style.display = 'none';
+  username.textContent = '';
+  link.textContent = '';
+  description.textContent = '';
 });
 
 const loading = document.querySelector('.loading');
